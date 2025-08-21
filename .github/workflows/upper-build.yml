@@ -16,13 +16,14 @@ jobs:
             - run: go version
             - uses: actions/setup-go@v5
               with:
-                   go-version: '1.22'
+                #    go-version: '1.22'
+                go-version-file: ./upper/go.mod
             - run: go version
             - run: |
                 ls
                 go build
                 ls
-                ./upper foo the bar
+                go test
               working-directory: upper
             # - name: Checkout code
             #   uses: actions/checkout@v4
