@@ -14,10 +14,9 @@ jobs:
             - uses: actions/setup-go@v5
               with:
                 go-version: '1.22'
-            
-            # - name: Checkout code
-            #   uses: actions/checkout@4
-            # - run: go build
-            #   working-directory: ./upper
-            # - run: ./upper foo the bar
-            #   working-directory: ./upper
+            - name: Checkout code
+              uses: actions/checkout@4
+            - run: go build
+              working-directory: ./upper
+            - run: ./upper foo the bar
+              working-directory: ./upper
