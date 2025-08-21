@@ -5,10 +5,8 @@ name: Test
 # Controls when the workflow will run
 on:
   # push:
-  # schedule:
-  #   - cron: '*/5 * * * *' # Runs every 5 minutes
-  # schedule: did not work.
-  #   - cron: '*/5 * * * *'
+  schedule:
+    - cron: '*/5 * * * *' # Runs every 5 minutes
   workflow_dispatch: # manual trigger
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -29,5 +27,4 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          echo "Hello! Current time is: $(date)"
