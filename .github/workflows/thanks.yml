@@ -39,7 +39,7 @@ jobs:
                     console.log(comment.data);
 
                     //auto label
-                    github.rest.isseus.addLabels({
+                    github.rest.issues.addLabels({
                         owner,
                         repo,
                         issue_number,
